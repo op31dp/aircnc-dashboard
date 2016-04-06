@@ -1,0 +1,349 @@
+/*
+ * General Styles
+ */
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.3;
+  color: rgb(86, 90, 92);
+  background: rgb(245, 245, 245);
+}
+
+* {
+  -moz-box-sizing: border-box; /* Firexfox */
+  -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+  box-sizing: border-box; /* IE */
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin: 0 12.5px; /*Pixel value to make calcs easier later*/
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 90, 95);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*
+ * Hidden on mobile
+ */
+
+.announcement, nav.large ul, .message-text .subject{
+  display: none;
+}
+
+/*
+ * Header and Nav
+ */
+
+header {
+  background: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(220, 224, 224);
+  padding: 0 0.8rem 0 0;
+}
+
+
+
+.memu {
+  float: right;
+
+}
+
+
+
+.logo {
+  float: left;
+  display: block;
+  border-right: 1px solid rgb(220, 224, 224);
+}
+
+/*
+ * Profile
+*/
+
+.profile {
+  border: 1px solid rgb(220, 224, 224);
+}
+
+.profile {
+  background: #fff;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.profile img {
+  display: block;
+  width: 100%;
+}
+
+.profile .details {
+  padding: .8rem 0.5rem;
+  text-align: center;
+}
+
+.profile h2 {
+  font-size: 2rem;
+  margin: 0 0 .1rem 0;
+  color: rgb(88, 88, 88);
+}
+
+.profile .member-since {
+  font-size: .9rem;
+  margin: 0 0 0.6rem;
+}
+
+/*
+ * Panel
+*/
+
+.panel {
+  border: 1px solid rgb(220, 224, 224);
+  margin-bottom: 1.6rem;
+}
+
+.panel h3 {
+  background: rgb(237, 239, 237);
+  padding: .4rem;
+  font-size: .9rem;
+  border-bottom: 1px solid rgb(220, 224, 224);
+}
+
+.panel h3, .panel-content {
+  padding: .6rem 1.25rem;
+}
+
+/*
+ * Notifications
+*/
+
+.notification {
+  margin-bottom: 0.6rem;
+  padding: 0.4rem;
+  font-size: .85rem;
+}
+
+/*
+ * Notification, Message Join Styles
+*/
+
+.notification, .message {
+  border-bottom: 1px solid rgba(220,224,224,0.5);
+}
+
+.notification:last-of-type, .message:last-of-type {
+  border-bottom-width: 0;
+}
+
+/*
+ * Messages
+*/
+
+.message {
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.message .photo {
+  margin-bottom: 1.5rem;
+}
+
+.message .photo img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.message .details {
+  margin-bottom: 1.5rem;
+}
+
+.message .details p {
+  margin-bottom: .1rem;
+}
+
+.message .message-text p.body {
+  color: rgb(130, 136, 138);
+}
+
+.status {
+  font-weight: bold;
+}
+
+.status.accepted {
+  color: rgb(63, 179, 79);
+}
+
+.status.declined {
+  color: rgb(0, 122, 135);
+}
+
+
+/*
+ * Footer
+*/
+
+footer {
+  background: rgb(43, 45, 46);
+  text-align: center;
+  font-size: .6rem;
+  padding: .5rem;
+  border-top: 1px solid rgb(220, 224, 224);
+}
+
+@media only screen and (min-width: 768px) {
+ /*
+ * Hiding/showing specific elements
+ */
+
+ .announcement {
+ display: block;
+ }
+
+ /*
+ * Sizing container for larger size
+ */
+
+ .container, .announcement {
+ width: 720px;
+ margin: 0 auto;
+ }
+
+ /*
+ * Large screen header and nav
+ */
+
+ nav.large ul {
+ display: inline-block;
+ float: right;
+ }
+
+ nav.large li {
+ list-style: none;
+ display: inline-block;
+ padding: 1.4rem .6rem;
+ margin-right: 1.5rem;
+ border-left: 1px solid rgb(220, 224, 224);
+ font-weight: bold;
+ }
+
+ nav.large li a {
+ color: inherit;
+ display: block;
+ }
+
+ /*
+ * Announcement
+ */
+
+ .announcement {
+ background: rgb(194, 228, 231);
+ padding: 1.4rem 2rem;
+ margin-top: 1.4rem;
+ }
+
+ .announcement .imagery {
+ float: left;
+ margin-right: 1rem;
+ }
+
+ .announcement .info h3 {
+ font-weight: bold;
+ margin-bottom: .3rem;
+ }
+
+ .announcement .info p {
+ font-size: .9rem;
+ }
+
+ /*
+ * Column Styles
+ */
+
+ .column {
+ display: block;
+ float: left;
+ margin: 20px 0;
+ }
+
+ .column.profile {
+ width: 195px;
+ margin-right: 25px;
+ }
+
+ .column.updates {
+ width: 500px;
+ }
+
+ /*
+ * Large screen header and nav
+ */
+
+ .column.profile .member-since {
+ font-size: .8rem;
+ }
+
+ /*
+ * Messages
+ */
+
+ .message-text .subject {
+ display: block;
+ font-weight: bold;
+ }
+
+ .message .component, .message .photo, .message .details {
+ float: left;
+ }
+
+ .message .photo {
+ margin-right: 10px;
+ }
+
+ .message .sender {
+ width: 140px;
+ margin-right: 10px;
+ }
+
+ .message .message-text {
+ width: 220px;
+ margin-right: 5px;
+ }
+
+ .message .booking-details {
+ width: 80px;
+ }
+
+
+  .memu {
+    display: block;
+  }
+
+}
+
+
+
+
+
+@media only screen and (min-width: 830px) {
+
+  .memu {
+    display: block;
+  }
+
+
+}
+
+
+
